@@ -1,8 +1,8 @@
 /*
- * @WhatViewport module
+ * @WhatViewport module v1.0
  *
  * Determines the width of the viewport (cross-browser) and offers conditional methods
-  * To figure out which device we are usign.
+ * To figure out which device we are usign.
  *
  */
 (function() {
@@ -42,6 +42,13 @@
 
 			mode = getOrientation();
 
+		}, updateDimensions = function() {
+			
+			ww = w[a + 'Width'];
+			wh = w[a + 'Height'];
+
+			mode = getOrientation();
+			
 		}, getOrientation = function() {
 
 			if (wh > ww)
@@ -91,7 +98,8 @@
 			isTabletLandscape : isTabletLandscape,
 			isTabletPortrait : isTabletPortrait,
 			isDesktop : isDesktop,
-			isWideDesktop : isWideDesktop
+			isWideDesktop : isWideDesktop,
+			updateDimensions : updateDimensions
 
 		};
 

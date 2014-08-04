@@ -41,8 +41,14 @@ $(document).ready( function() {
      	if( $Modules.whatViewport.isMobile() )
      		$whatViewportLabel.html( 'mobile' );
      		      		     		     		
-     		     		    	
     }
+    
+    $( window ).resize( function() {
+    	
+    	$Modules.whatViewport.updateDimensions();
+    	printViewport();
+    	 
+    });
     
     
     
