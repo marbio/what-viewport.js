@@ -62,6 +62,14 @@
 
 			return (ww <= options.breakpoints.mobile );
 
+		}, isMobileLandscape = function() {
+
+			return (ww <= options.breakpoints.mobile && mode == options.mode.landscape );
+
+		}, isMobilePortrait = function() {
+
+			return (ww <= options.breakpoints.mobile && mode == options.mode.portrait );
+
 		}, isTabletLandscape = function() {
 
 			return (ww > options.breakpoints.mobile && ww < options.breakpoints.tabletLandscapeUp && mode == options.mode.landscape );
