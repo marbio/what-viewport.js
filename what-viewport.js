@@ -26,7 +26,12 @@
 					tabletPortraitUp : 1001,
 					desktop : 1279,
 					desktopWide : 1407
+				},
+				mode: {
+					landscape : 'landscape',
+					portrait : 'portrait'
 				}
+				
 			};
 
 
@@ -45,9 +50,9 @@
         getOrientation = function() {
 
             if ( wh > ww )
-				mode = "portrait";
+				mode = options.mode.portrait;
 			else
-				mode = "landscape";
+				mode = options.mode.landscape;
 				
 			return mode;	
 
@@ -61,25 +66,25 @@
 
 		isTabletLandscape = function () {
 
-			return ( ww > options.breakpoints.mobile && ww < options.breakpoints.tabletLandscapeUp && mode == "landscape" );
+			return ( ww > options.breakpoints.mobile && ww < options.breakpoints.tabletLandscapeUp && mode == options.mode.landscape );
 
 		},
 
 		isTabletPortrait = function () {
 
-			return ( ww > options.breakpoints.mobile && ww < options.breakpoints.tabletPortraitUp && mode == "portrait" );
+			return ( ww > options.breakpoints.mobile && ww < options.breakpoints.tabletPortraitUp && mode == options.mode.portrait );
 
 		},
 
 		isMobileLandscape = function () {
 
-			return ( ww < options.breakpoints.mobile && mode == "landscape" );
+			return ( ww < options.breakpoints.mobile && mode == options.mode.landscape );
 
 		},
 
 		isMobilePortrait = function () {
 
-			return ( ww < options.breakpoints.mobile && mode == "portrait" );
+			return ( ww < options.breakpoints.mobile && mode == options.mode.portrait );
 
 		},
 
@@ -99,7 +104,13 @@
 
             init: init,
             getOrientation : getOrientation,
+            isMobile: isMobile,
+            isMobilePortrait : isMobilePortrait,
+            isMobileLandscape : isMobileLandscape,            
+            isTabletLandscape : isTabletLandscape,
+            isTabletPortrait : isTabletPortrait,
             isDesktop: isDesktop,
+            isWideDesktop: isWideDesktop
 
         }; 
 
