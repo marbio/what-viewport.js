@@ -28,7 +28,20 @@ $(document).ready( function() {
     	
     	if( $Modules.whatViewport.isDesktop() )
      		$whatViewportLabel.html( 'desktop' );
-    	
+     	if( $Modules.whatViewport.isWideDesktop() )
+     		$whatViewportLabel.html( 'wide desktop' );	
+     	if( $Modules.whatViewport.isTabletPortrait() )
+     		$whatViewportLabel.html( 'tablet portrait' );
+     	if( $Modules.whatViewport.isTabletLandscape() )
+     		$whatViewportLabel.html( 'tablet landscape' );
+     	if( $Modules.whatViewport.isMobileLandscape() )
+     		$whatViewportLabel.html( 'mobile landscape' );
+     	if( $Modules.whatViewport.isMobilePortrait() )
+     		$whatViewportLabel.html( 'mobile portrait' );
+     	if( $Modules.whatViewport.isMobile() )
+     		$whatViewportLabel.html( 'mobile' );
+     		      		     		     		
+     		     		    	
     }
     
     
@@ -43,7 +56,8 @@ $(document).ready( function() {
 	<header>
 		<div class="inner">
 			<h1>Welcome to the What Viewport Demo page! </h1>
-			<p>Try to resize the page to view the change of viewport.</p>			
+			<p>Try to resize the page to view the change of viewport.</p>
+			<p><small>what-viewport.js v1.0 by Fabio Marasco</small></p>			
 		</div>
 	</header>
 
@@ -51,12 +65,6 @@ $(document).ready( function() {
 		<span>what viewport?</span>
 		<span id="whatviewport"></span>	
 	</div>
-	
-	<footer>
-		<div class="inner">
-			<p>what-viewport.js v1.0 by Fabio Marasco</p>			
-		</div>
-	</footer>
 
 </body>
 </html>

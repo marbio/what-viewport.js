@@ -2,8 +2,8 @@
 /*
  * @WhatViewport module
  *	
- * Determina la width della viewport (cross-browser) ed offre dei metodi condizionali
- * per capire su quale dispositivo ci troviamo
+ * Determines the width of the viewport (cross-browser) and offers conditional methods 
+ * To figure out which device we are usign.
  * 
  */
 (function () {
@@ -44,6 +44,8 @@
 	
 			ww = w[ a+'Width'];
 			wh = w[ a+'Height'];
+			
+			mode = getOrientation();
         
         },
 

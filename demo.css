@@ -17,19 +17,12 @@ p {
 	margin: 0 0 15px 0;
 }
 
-header, footer {
+header {
 	background-color: white;
 }
 
 header {
 	margin-bottom: 50px;
-}
-
-footer {
-	width: 100%;
-	margin-top: 50px;
-	position: fixed;
-	bottom: 0px;
 }
 
 .wrap {
@@ -40,6 +33,7 @@ footer {
 	position: relative;
 	margin: 0 auto;
 	padding: 0;
+	padding-bottom: 3em;
 }
 
 .wrap span {
