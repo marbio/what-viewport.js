@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>What Viewport demo</title>
+
+<meta name = "keywords" content = "" />
+<meta name = "description" content = "" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1 user-scalable=no">
+
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+<link href="demo.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" 	src="what-viewport.js"></script>
+
+<script type="text/javascript">
+	
+$(document).ready( function() {
+	
+	var $whatViewportLabel = $( '#whatviewport' );
+	
+    $Modules.whatViewport.init();
+    
+    printViewport();
+    
+    function printViewport() {
+    	
+    	if( $Modules.whatViewport.isDesktop() )
+     		$whatViewportLabel.html( 'desktop' );
+    	
+    }
+    
+    
+    
+});
+
+</script>
+
+</head>
+<body>
+	
+	<header>
+		<div class="inner">
+			<h1>Welcome to the What Viewport Demo page! </h1>
+			<p>Try to resize the page to view the change of viewport.</p>			
+		</div>
+	</header>
+
+	<div class="wrap">
+		<span>what viewport?</span>
+		<span id="whatviewport"></span>	
+	</div>
+	
+	<footer>
+		<div class="inner">
+			<p>what-viewport.js v1.0 by Fabio Marasco</p>			
+		</div>
+	</footer>
+
+</body>
+</html>
