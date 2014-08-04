@@ -1,4 +1,4 @@
-what-device.js
+what-viewport.js
 ==============
 
 A small javascript object that returns information about the device such as the type and orientation.
