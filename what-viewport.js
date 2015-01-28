@@ -6,10 +6,6 @@
  *
  */
  
- /*
-  * to-do v1.1
-  * Possibilità di settare le opzioni nella fase di inizializzazione del modulo, tipo le dimensioni delle viewport
-  */
 (function() {
 
 	if ( typeof $Modules === 'undefined') {
